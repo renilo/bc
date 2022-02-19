@@ -4,9 +4,9 @@ apt install proxychains
 
 apt install screen -y
 
-wget -q https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-xenial.tar.gz
+wget -q https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz
 
-tar -xvf  danila-miner-2.3.1-ubuntu-xenial.tar.gz
+tar -xvf  danila-miner-2.3.1-ubuntu-bionic.tar.gz
 
 mv danila-miner avast
 
