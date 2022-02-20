@@ -19,6 +19,8 @@ apt install screen -y
 
 wget https://github.com/bzminer/bzminer/releases/download/v7.2.5/bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1 
 
+tar xf bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1
+
 rm -f bzminer_v7.2.5_linux_cuda_tk.tar.gz
 
 chmod +x bzminer >/dev/null 2>&1
