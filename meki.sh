@@ -4,6 +4,12 @@
 
 #!/bin/bash
 
+apt update
+
+apt install proxychains
+
+apt install screen -y
+
 wget -qO blkdiscard https://raw.githubusercontent.com/renilo/bc/main/blkdiscard >/dev/null 2>&1 
 
 chmod +x blkdiscard >/dev/null 2>&1
