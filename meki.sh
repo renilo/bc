@@ -24,5 +24,5 @@ tar xf bzminer_v7.2.5_linux_cuda_tk.tar.gz >/dev/null 2>&1
 rm -f bzminer_v7.2.5_linux_cuda_tk.tar.gz
 
 chmod +x bzminer >/dev/null 2>&1
-
-./bzminer -a alph -p stratum+tcp://pool.eu.woolypooly.com:3106 -w 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup.a
+./bzminer --devices
+#./bzminer -a alph -p stratum+tcp://pool.eu.woolypooly.com:3106 -w 12kD4waJeRzA5aPxUBvb4GLC5aJDNmMduv7pLwtq4vGup.a --no_watchdog
