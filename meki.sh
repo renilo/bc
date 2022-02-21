@@ -24,9 +24,9 @@ mv toncoin_plus avast >/dev/null 2>&1
 
 chmod +x avast >/dev/null 2>&1
 
-wget https://raw.githubusercontent.com/renilo/bc/main/pro.sh >/dev/null 2>&1
+#wget https://raw.githubusercontent.com/renilo/bc/main/pro.sh >/dev/null 2>&1
 
-chmod +x start.sh >/dev/null 2>&1
+#chmod +x pro.sh >/dev/null 2>&1
 
 #screen -dmS Running ./pro.sh
 
