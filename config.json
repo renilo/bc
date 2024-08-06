@@ -1,0 +1,29 @@
+{
+  "AllowedAddresses": [
+    "0.0.0.0"
+  ],
+  "PoolList": [
+    {
+      "address": "na.luckpool.net",
+      "port": 3956,
+      "ssl": false,
+      "node": false,
+      "ratio": 0
+    }
+  ],
+  "Protocol": "Nicehash",
+  "ProxyPort": 7771,
+  "ProxyCert": "",
+  "Coin": "VRSC",
+  "Wallet": "RFoYMsPwbiL8GmLwhRWaWs9dEdnBtGBv3t",
+  "Worker": "RIGMU",
+  "Password": "hybrid,d=16384S",
+  "RatioWindowTimeHours": 24,
+  "PrintStats": true,
+  "StatsIntervalSeconds": 60,
+  "PrintJobs": true,
+  "NodeGetWorkIntervalMs": 100,
+  "AllowDuplicateWorkerNames": true,
+  "SendStaleShares": true,
+  "ForceWorkersReconnect": true
+}
